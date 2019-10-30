@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>neotech-test</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <div class="page">
+      <h1 class="page__title visually-hidden">Neotech-test</h1>
+
+      <header class="header">
+        <form action="#" class="login-form">
+          <fieldset>
+            <h2 class="login-form__title visually-hidden">Login-form</h2>
+
+            <div class="login-form__content">
+              <div class="field">
+                <input type="text" id="email" class="field__input" placeholder="email">
+                <label for="email" class="field__label">E-mail/Номер счета</label>
+                <span class="field__helper">Helper text</span>
+              </div>
+              <div class="field">
+                <input type="password" id="password" class="field__input field__input--password" placeholder="pass">
+                <label for="password" class="field__label">Пароль</label>
+                <button class="field__show-pass" type="button"></button>
+              </div>
+              <input type="submit" value="войти" class="login-form__submit">
+            </div>
+          </fieldset>
+        </form>
+      </header>
+
+      <main class="main">
+        <section class="payments">
+          <div class="payments__content">
+            <h2 class="payments__title">способы оплаты</h2>
+
+            <div class="payments__list-wrapper">
+              <ul class="payments__list">
+                <li class="payments__item">
+                  <a href="#" class="payments__link">
+                    <img src="assets/img/qiwi.svg" alt="qiwi" class="payments__logo">
+                  </a>
+                </li>
+
+                <li class="payments__item">
+                  <a href="#" class="payments__link">
+                    <img src="assets/img/beeline.svg" alt="beeline" class="payments__logo">
+                  </a>
+                </li>
+
+                <li class="payments__item">
+                  <a href="#" class="payments__link">
+                    <img src="assets/img/megafon.svg" alt="megafon" class="payments__logo">
+                  </a>
+                </li>
+
+                <li class="payments__item">
+                  <a href="#" class="payments__link">
+                    <img src="assets/img/mts.svg" alt="mts" class="payments__logo">
+                  </a>
+                </li>
+
+                <li class="payments__item">
+                  <a href="#" class="payments__link">
+                    <img src="assets/img/tele2.svg" alt="tele2" class="payments__logo">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="news">
+          <h2 class="news__title visually-hidden">News</h2>
+
+          <div class="news__content">
+            <div class="main-new">
+              <a href="#" class="main-new__link">
+                <img src="assets/img/ZKRfrmQ5d_8.png" alt="Доход по-итальянски. 3 огненные ставки на тур Серии А" class="main-new__image">
+                <div class="main-new__content">
+                  <div class="main-new__date">11:24, 19 октября 2018</div>
+                  <h3 class="main-new__title">Доход по-итальянски. 3 огненные ставки на тур Серии А</h3>
+                </div>
+              </a>
+            </div>
+
+            <ul class="additional-news">
+              <li class="additional-news__item">
+                <a href="#" class="additional-news__link">
+                  <img src="assets/img/UtT9qy0HtbU.png" alt="Фернандеш обиделся на “Локомотив”" class="additional-news__image">
+                  <div class="additional-news__content">
+                    <div class="additional-news__date">11:24, 19 октября 2018</div>
+                    <h3 class="additional-news__title">Фернандеш обиделся на “Локомотив”</h3>
+                  </div>
+                </a>
+              </li>
+
+              <li class="additional-news__item">
+                <a href="#" class="additional-news__link">
+                  <img src="assets/img/greece.png" alt="Фернандеш обиделся на “Локомотив”" class="additional-news__image">
+                  <div class="additional-news__content">
+                    <div class="additional-news__date">11:24, 19 октября 2018</div>
+                    <h3 class="additional-news__title">Фернандеш обиделся на “Локомотив”</h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

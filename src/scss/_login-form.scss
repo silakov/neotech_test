@@ -1,0 +1,153 @@
+.login-form {
+  color: $login-form-color;
+  max-width: $page-width;
+  margin: 0 auto;
+  padding: 0 $page-indent-desktop;
+
+  &__title {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+
+    @include media-max($mobile) {
+      flex-direction: column;
+      width: 256px;
+      margin: 0 auto;
+    }
+  }
+
+  &__submit {
+    min-width: 170px;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    height: $form-elements-height;
+    border: 2px solid $accent-color;
+    color: $main-color;
+    font: 500 14px/16px 'Roboto', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: $accent-color;
+    cursor: pointer;
+    outline: none;
+    border-radius: 2px;
+    transition: all $main-transition;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: transparent;
+    }
+  }
+}
+
+.field {
+  height: $form-elements-height;
+  position: relative;
+  margin-right: 19px;
+  width: 50%;
+  background: #ebedef;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 2px 2px 0 0;
+  border-bottom: 1px solid $login-form-color;
+
+  @include media-max($mobile) {
+    margin: 0 0 32px;
+    width: 100%;
+  }
+
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: $accent-color;
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    transition: width $main-transition;
+  }
+
+  &:focus-within {
+    &:before {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 22px $input-indent 7px;
+    border: none;
+    outline: none;
+    background: none;
+    height: $form-elements-height;
+    width: 100%;
+    order: 2;
+    color: $main-color;
+    font: 500 14px/16px 'Roboto', Arial, Helvetica, sans-serif;
+
+    &::placeholder {
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+    &::-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &--password {
+      padding-right: 0;
+      width: calc(100% - #{$input-indent} - #{$show-pass-width});
+    }
+  }
+
+  &__label {
+    order: 1;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: $input-indent;
+    margin-right: -100%;
+    width: calc(100% - #{$input-indent});
+    transform-origin: left top;
+    transform: scale(1) translateY(0);
+    transition: transform $main-transition;
+
+    .field__input:focus + &,
+    .field__input:not(:placeholder-shown) + & {
+      transform: scale(.786) translateY(-12px);
+      color: #56616c;
+    }
+  }
+
+  &__show-pass {
+    height: 100%;
+    min-width: $show-pass-width;
+    border: 0;
+    padding: 0;
+    order: 3;
+    margin-left: $input-indent;
+    cursor: pointer;
+    position: relative;
+    background: url(../assets/img/eye-open.svg) no-repeat 50% 50%;
+
+    &.isShown {
+      background-image: url(../assets/img/eye-close.svg);
+    }
+  }
+
+  &__helper {
+    position: absolute;
+    top: 100%;
+    left: $input-indent;
+    right: $input-indent;
+    font-size: 11px;
+    margin-top: 4px;
+    overflow: hidden;
+    line-height: $helper-line-height;
+    max-height: calc(2 * #{$helper-line-height});
+  }
+}
